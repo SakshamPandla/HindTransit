@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HindTransit</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="st_back_pressed">Press back again to exit</string>
+    <string name="st_password">Password</string>
+    <string name="st_login">Login</string>
+    <string name="st_signup">Signup</string>
+    <string name="st_create_acc">Create Account ? Signup</string>
+    <string name="st_username">Username</string>
+    <string name="st_already_acc">Already have an Account ?</string>
+</resources>

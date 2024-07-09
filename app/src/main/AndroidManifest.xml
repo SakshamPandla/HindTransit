@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.project2.hindtransit">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HindTransit"
+        tools:targetApi="31">
+
+        <activity android:name="com.project2.hindtransit.SplashScreenActivity"
+            android:exported="true">
+            <!-- android:label="@string/title_activity_splashscreen"> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.project2.hindtransit.LoginActivity" />
+        <activity
+            android:name="com.project2.hindtransit.RegisterActivity"
+            android:label="@string/title_activity_signup">
+
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".cardview"></activity> <!-- Adjusted activity name -->
+
+        <activity android:name=".RouteActivity" />
+
+        <activity android:name=".SearchActivity" /> <!-- Removed intent-filter for SearchActivity -->
+
+        <!-- Add your Google Maps API key here -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB3uH4hQuzwHLx9N-f2wxzL-n5clB4JDDg" /> <!-- Replace with your actual API key -->
+
+    </application>
+
+</manifest>

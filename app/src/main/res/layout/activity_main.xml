@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Search views for "from" and "to" locations -->
+    <SearchView
+        android:id="@+id/fromLocationSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:queryHint="Search for from location" />
+
+    <SearchView
+        android:id="@+id/toLocationSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fromLocationSearchView"
+        android:queryHint="Search for to location" />
+
+    <!-- Container for buttons -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <!-- Button for Maps -->
+        <Button
+            android:id="@+id/mapsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Maps"
+            android:background="@drawable/rectangular_button" />
+
+        <!-- Button for Ola -->
+        <Button
+            android:id="@+id/olaButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".82"
+            android:background="@drawable/rectangular_button"
+            android:text="Ola" />
+
+        <!-- Button for Uber -->
+        <Button
+            android:id="@+id/uberButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Uber"
+            android:background="@drawable/rectangular_button" />
+
+        <!-- Button for BlaBlaCar -->
+        <Button
+            android:id="@+id/blablacarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BBC"
+            android:background="@drawable/rectangular_button" />
+
+
+
+        <!-- Button for Metro -->
+        <Button
+            android:id="@+id/metroButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Metro"
+            android:background="@drawable/rectangular_button" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonContainer"
+        android:layout_below="@id/toLocationSearchView"
+        android:layout_marginBottom="3dp"
+        tools:context=".MapsActivity" />
+
+    <!-- WebView for Ola -->
+    <WebView
+        android:id="@+id/olaWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_above="@id/buttonContainer" />
+
+    <!-- WebView for Uber -->
+    <WebView
+        android:id="@+id/uberWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_above="@id/buttonContainer" />
+
+    <!-- WebView for BlaBlaCar -->
+    <WebView
+        android:id="@+id/blablacarWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_above="@id/buttonContainer" />
+
+</RelativeLayout>
